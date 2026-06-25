@@ -47,5 +47,5 @@ playwright==1.58.0              # after install run: playwright install
 github-copilot-sdk==1.0.1
 
 # --- Dev / test ---------------------------------------------------------------
-pytest==8.4.2        # for `pytest tests/` (not required at runtime)
+pytest==9.0.3        # for `pytest tests/` (not required at runtime)
 ipykernel==7.2.0                # notebook / interactive kernel (dev only)
