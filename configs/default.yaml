@@ -1,0 +1,83 @@
+name: default
+dataset: apeiron_bench
+log_type: none # localfile
+random_seed: 42
+max_exception_retry: 3 
+max_interrupt_times: 5
+max_llm_recall: 3
+system_type: basic 
+bind_libraries: ['fmp','fred']
+agent_configs:
+  scenario_helper:
+    model_name: gpt-5
+    system_prompt_path: helper/scenario_helper_system
+    max_completion_tokens: 128000
+  persona_helper:
+    model_name: gpt-5
+    system_prompt_path: helper/persona_helper_system
+    max_completion_tokens: 128000
+  demand_helper:
+    model_name: gpt-5
+    system_prompt_path: helper/demand_helper_system
+    max_completion_tokens: 128000
+  builder:
+    model_name: gpt-5 # codex-mini, claude-sonnet-4, gpt-5
+    api_type: response # response, completion
+    max_completion_tokens: 128000
+  judge:
+    model_name: gpt-5
+    system_prompt_path: cua/judge_agent_system
+    max_completion_tokens: 128000
+perplexity_max_completion: 5000
+perplexity_model: sonar
+helper_configs:
+  scenario_categories: # the order matters here, as its the order of generation
+    finance: 50
+    economics: 50
+    marketing: 50
+    business: 50
+    policy_makers: 50
+    technology: 50
+  num_distributions: 5
+  num_personas: 8
+  num_demands: 20 # thus 8 x 20 in total
+builder_configs:
+  max_build_steps: 5
+  check_cua_steps: 30
+  max_session_steps: 25 # debug + ops
+  revert_to_success: true # if true, always continue from the last successful step
+  framework: streamlit # streamlit, reflex
+  test_in_venv: true # if true, test the builder in a virtual environment
+  include_traces: true # if true, include traces in the build prompt
+cua_configs:
+  max_iterations: 30
+  display_width: 1280
+  display_height: 800
+  global_cua_lock: 300 # how many CUA sessions can run in parallel
+optimizer_configs:
+  max_optimize_steps: 4
+  cua_max_workers: 20 # how many cua in parallel
+  cua_launch_interval: 2.0 # how long to wait between launching cua sessions
+  batch_size: 20 # how many samples to be used in each optimization step
+  do_split: false # if true, split the dataset into train/test/dev sets
+  splits:
+    train: 0.7
+    test: 0.2
+    dev: 0.1 # the split of the training set, the rest will be used for evaluation
+  locality_policy: cicd # cicd, init, both
+  locality_control: loc # none, loc, act, both
+  locality_method: fixed # fixed, adaptive
+  locality_threshold:
+    loc: 0.5
+    act: 0.5
+experiment_configs:
+  chunks: 0-4 # all # i-j for chunk from <start> to <end>, e.g., 0-3 covers 0,1,2,3 (or like this directly); or i for one chunk; all for all chunks sequentially
+  init_samples: 70 
+  cicd_samples: [20, 30, 40] # for 160 samples, 3 cicd experiments will be run
+  num_workers: 60 # how many workers to run the experiments in parallel
+  launch_interval: 10
+eval_configs:
+  eval_method: cua # cua (k x cua), judge (1 x cua, k x judge), both (k x cua, k x judge)
+  evals_per_sample: 5 # how many evaluations per sample
+
+

@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stracelit"
+version = "0.0.1"
+
+[project.scripts]
+stracelit = "stracelit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]  # Look for packages in the current directory (".")

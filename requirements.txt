@@ -1,0 +1,51 @@
+# =============================================================================
+# Apeiron / amorphware — runtime requirements (pinned to the dedicated venv)
+# -----------------------------------------------------------------------------
+# Install:  pip install -r requirements.txt
+# These pins reflect the verified amorphware venv (Python 3.12). The package
+# metadata in setup.py lists the same core deps unpinned; this file is for
+# reproducible installs. Versions verified working on 2026-06-23.
+# =============================================================================
+
+# --- Core library (sllm + apeiron) -------------------------------------------
+click==8.3.1
+openai==2.20.0
+azure-identity==1.25.2          # pulls in azure-core (azure.core.credentials)
+numpy==2.4.2
+pydantic==2.12.5
+tiktoken==0.12.0
+pyparsing==3.3.2
+requests==2.32.5
+tqdm==4.67.3
+filelock==3.21.2
+python-dotenv==1.2.1
+PyYAML==6.0.3
+psutil==7.2.2
+pytz==2025.2
+art==6.5
+
+# --- Data / plotting ----------------------------------------------------------
+pandas==2.3.3
+matplotlib==3.10.8
+pillow==12.1.1
+cairosvg==2.8.2                 # SVG rendering (requires Cairo system libs)
+
+# --- Streamlit app & viz (bin/app.py, bin/pages) ------------------------------
+streamlit==1.54.0
+streamlit-navigation-bar==3.3.0
+st-theme==1.2.3
+stracelit==0.0.1
+altair==6.0.0
+Wand==0.6.13                    # requires the ImageMagick system library
+
+# --- Computer-Use Agent tool (sllm/tools/cua.py) ------------------------------
+playwright==1.58.0              # after install run: playwright install
+
+# --- Claude via the GitHub Copilot SDK (sllm/copilot_client.py) ---------------
+# Optional: only needed for provider=COPILOT (claude-* model cards).
+# Also requires the GitHub Copilot CLI on PATH.
+github-copilot-sdk==1.0.1
+
+# --- Dev / test ---------------------------------------------------------------
+pytest==8.4.2        # for `pytest tests/` (not required at runtime)
+ipykernel==7.2.0                # notebook / interactive kernel (dev only)
