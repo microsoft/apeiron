@@ -1,0 +1,22 @@
+name: test
+log_type: none # localfile
+max_interrupt_times: 5
+helper_configs:
+  scenario_categories: # the order matters here, as its the order of generation
+    finance: 10
+    economics: 10
+    marketing: 10
+    business: 10
+    policy_makers: 10
+  num_distributions: 5
+  num_personas: 8
+  num_demands: 20
+builder_configs:
+  revert_to_success: true # if true, always continue from the last successful step
+  test_in_venv: false # if true, test the builder in a virtual environment
+cua_configs:
+  max_iterations: 30
+optimizer_configs:
+  max_optimize_steps: 3
+  cua_max_workers: 10 # how many cua in parallel
+  batch_size: 10 # how many samples to be used in each optimization step

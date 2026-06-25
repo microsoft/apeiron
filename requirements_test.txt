@@ -1,0 +1,6 @@
+streamlit
+streamlit_navigation_bar
+pandas
+numpy
+plotly
+
