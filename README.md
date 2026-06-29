@@ -41,17 +41,28 @@ ACL 2026**.
 If you use Apeiron in your research, please cite:
 
 ```bibtex
-@inproceedings{apeiron2026,
-  title     = {Apeiron: A Scalable LLM-agentic Framework for Autonomous Full-lifecycle Demand-optimized Application Synthesis},
-  author    = {Junyan Cheng and Ankit Srivastava and Jessie Zeng and Milenko Drinic and Jack W. Stokes},
-  booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
-  year      = {2026},
-  publisher = {Association for Computational Linguistics}
+@inproceedings{cheng-etal-2026-apeiron,
+    title = "Apeiron: A Scalable {LLM}-agentic Framework for Autonomous Full-lifecycle Demand-optimized Application Synthesis",
+    author = "Cheng, Junyan  and
+      Srivastava, Ankit  and
+      Zeng, Jessie  and
+      Drinic, Milenko  and
+      Stokes, Jack W.",
+    editor = "Liakata, Maria  and
+      Moreira, Viviane P.  and
+      Zhang, Jiajun  and
+      Jurgens, David",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {ACL} 2026",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-acl.188/",
+    pages = "3868--3899",
+    ISBN = "979-8-89176-395-1",
+    abstract = "We introduce Apeiron, a scalable and extensible framework for addressing *amorphous* user demands through autonomous, full-lifecycle application synthesis. Apeiron models the unstructured app development process as a heuristic optimization problem combining (i) a Computer-Use Agent (CUA) evaluator that simulates personas and demands, (ii) an *Activity Tracer* that grounds feedback in code-level interaction traces, and (iii) a *Locality Controller* that constrains changes during continuous integration and delivery (CI/CD). Furthermore, we introduce an innovative data generation approach using CUA-as-a-Judge to tackle data scarcity. Across 300 app scenarios, 2,400 personas, and 46,338 demands, Apeiron outperformed baselines by 10.7{\%} in CUA ratings and 27.8{\%} in user-demand task scores. The optimization process enhances task scores by 64.7{\%}, and the tracer contributes a 25.1{\%} gain. In CI/CD, Apeiron effectively restores 96.9{\%} of the pre-shift mean CUA rating in one optimization step with {\ensuremath{<}}30{\%} code changes in response to 30{\%} demand shifts. Finally, a user study ($N=18$) shows that our CUA ratings strongly correlate with human judgment (Spearman{'}s $\rho=0.685$) and that users prefer Apeiron-synthesized apps over baselines."
 }
 ```
-
-> The full citation (pages and ACL Anthology ID/URL) will be updated once the
-> ACL 2026 proceedings are published.
 
 ---
 
