@@ -33,8 +33,8 @@ Computer-Use-Agent (CUA) build loop.
 
 ## Paper
 
-Apeiron is described in our paper **"Apeiron: A Scalable LLM-agentic Framework
-for Autonomous Full-lifecycle Demand-optimized Application Synthesis"**,
+Apeiron is described in our paper [**"Apeiron: A Scalable LLM-agentic Framework
+for Autonomous Full-lifecycle Demand-optimized Application Synthesis"**](https://aclanthology.org/2026.findings-acl.188/),
 accepted to the **Findings of the Association for Computational Linguistics:
 ACL 2026**.
 
