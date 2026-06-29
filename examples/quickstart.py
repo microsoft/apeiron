@@ -67,7 +67,7 @@ def _answer_block(msg) -> Optional[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Apeiron quickstart end-to-end demo")
-    ap.add_argument("--question", default="What is the capital of France? Answer in one word.")
+    ap.add_argument("--question", default="What is the biggest city in France? Answer in one word.")
     ap.add_argument("--model", default="gpt-4.1", help="OpenAI model card name")
     ap.add_argument("--copilot-model", default="claude-sonnet-4.5", help="Copilot/Claude model card name")
     ap.add_argument("--no-copilot", action="store_true", help="skip the Claude-via-Copilot call")
