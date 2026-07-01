@@ -6,7 +6,7 @@ max_exception_retry: 3
 max_interrupt_times: 5
 max_llm_recall: 3
 system_type: basic 
-bind_libraries: ['fmp','fred']
+bind_libraries: ['fmp','fred','plotly']
 agent_configs:
   scenario_helper:
     model_name: gpt-5

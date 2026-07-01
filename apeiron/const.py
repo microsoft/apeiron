@@ -5,7 +5,7 @@ import apeiron.utils as U
 from pydantic import BaseModel
 
 
-BASIC_PROXIES = ['fmp','fred']
+BASIC_PROXIES = ['fmp','fred','plotly']
 
 
 class Frameworks(Enum):

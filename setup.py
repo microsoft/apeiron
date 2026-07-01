@@ -40,6 +40,8 @@ setup(
         # Claude (and others) via the GitHub Copilot SDK (sllm/copilot_client.py).
         # Also requires the GitHub Copilot CLI on PATH.
         'copilot': ['github-copilot-sdk'],
+        # Optional Plotly chart helper library (apeiron.library.modules.plotly_proxy).
+        'plotly': ['plotly'],
     },
     entry_points={
         'console_scripts': [
