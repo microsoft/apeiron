@@ -85,7 +85,7 @@ class PlotlyProxy(BaseProxy):
             "color": (str, "segment"),
             "title": (str, "Trend over time"),
         },
-        response="plotly.graph_objects.Figure",
+        response=[{"type": "plotly.graph_objects.Figure"}],
     )
     def line(self, params: dict):
         import plotly.express as px
@@ -112,7 +112,7 @@ class PlotlyProxy(BaseProxy):
             "color": (str, "segment"),
             "title": (str, "Values by category"),
         },
-        response="plotly.graph_objects.Figure",
+        response=[{"type": "plotly.graph_objects.Figure"}],
     )
     def bar(self, params: dict):
         import plotly.express as px
@@ -139,7 +139,7 @@ class PlotlyProxy(BaseProxy):
             "color": (str, "segment"),
             "title": (str, "Scatter plot"),
         },
-        response="plotly.graph_objects.Figure",
+        response=[{"type": "plotly.graph_objects.Figure"}],
     )
     def scatter(self, params: dict):
         import plotly.express as px
@@ -165,7 +165,7 @@ class PlotlyProxy(BaseProxy):
             "values*": (str, "value"),
             "title": (str, "Share by category"),
         },
-        response="plotly.graph_objects.Figure",
+        response=[{"type": "plotly.graph_objects.Figure"}],
     )
     def pie(self, params: dict):
         import plotly.express as px
@@ -191,7 +191,7 @@ class PlotlyProxy(BaseProxy):
             "title": (str, "Distribution"),
             "nbins": (int, 20),
         },
-        response="plotly.graph_objects.Figure",
+        response=[{"type": "plotly.graph_objects.Figure"}],
     )
     def histogram(self, params: dict):
         import plotly.express as px
