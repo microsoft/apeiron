@@ -1,4 +1,4 @@
-# Amorphware (Apeiron)
+# Apeiron
 
 Apeiron is a research system for building **amorphware** — software that is
 synthesized and iteratively refined by LLM-driven agents through a
