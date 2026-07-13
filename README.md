@@ -149,7 +149,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 
 ```bash
 conda create -n apeiron python=3.13 -y &&\
-cd YOUR_DIR/amorphware &&\
+cd YOUR_DIR/apeiron &&\
 conda activate apeiron &&\
 pip install -e . &&\
 pip install -r requirements.txt &&\
@@ -172,7 +172,9 @@ Next.js installed if you wish to use reflex.
 pip install apeiron/btool/streamlit_tracer/.
 ```
 
-(Assumes you are in the `amorphware` folder.)
+Run this from the repository root. (This is also handled automatically by
+`pip install -r requirements.txt`, which installs the tracer from its local
+path.)
 
 ---
 
@@ -239,7 +241,7 @@ Details: https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-pat
 > Run only in an isolated, non-production sandbox. See
 > [Responsible AI](#responsible-ai-risks--mitigations).
 
-1. To run a full experiment (from the `amorphware` root directory):
+1. To run a full experiment (from the repository root directory):
 
    ```bash
    python scripts/run_exp.py

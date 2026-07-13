@@ -201,3 +201,7 @@ cython_debug/
 # Generated tracer output (never commit; may contain local absolute paths)
 .trace_logs/
 **/.trace_logs/
+
+# Stray build/packaging archives (never commit; may embed local paths)
+/apeiron.zip
+*.zip
