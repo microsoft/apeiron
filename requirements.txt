@@ -34,7 +34,12 @@ cairosvg==2.9.0                 # SVG rendering (requires Cairo system libs)
 streamlit==1.54.0
 streamlit-navigation-bar==3.3.0
 st-theme==1.2.3
-stracelit==0.0.1
+# stracelit is the FIRST-PARTY tracer package that lives in this repo
+# (apeiron/btool/streamlit_tracer). Install it from the local path, NOT from
+# PyPI: the name is unregistered on the public index, so a plain `stracelit==x`
+# pin is a dependency-confusion vector. A local path directive makes pip build
+# it from the repo directory and never resolve the name against any index.
+./apeiron/btool/streamlit_tracer
 altair==6.0.0
 Wand==0.6.13                    # requires the ImageMagick system library
 
