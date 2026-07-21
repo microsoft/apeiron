@@ -27,7 +27,7 @@ art==6.5
 # --- Data / plotting ----------------------------------------------------------
 pandas==2.3.3
 matplotlib==3.10.8
-pillow==12.2.0
+pillow==12.3.0
 cairosvg==2.9.0                 # SVG rendering (requires Cairo system libs)
 
 # --- Streamlit app & viz (bin/app.py, bin/pages) ------------------------------
